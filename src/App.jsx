@@ -1,5 +1,5 @@
 import AboutUs from "./components/AboutUs"
-import BlogSection from "./components/blogSection"
+import Blog from "./components/Blog"
 import Clients from "./components/Clients"
 import ContactUs from "./components/ContactUs"
 import Header from "./components/Header"
@@ -16,7 +16,7 @@ function App() {
           <Hero />
           <Services />
           <AboutUs />
-          <BlogSection />
+          <Blog />
         </div>
         <div className="flex flex-col gap-y-40 pt-40">
           <Clients />

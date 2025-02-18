@@ -64,9 +64,9 @@ function Services() {
                         </div>
                     }
                 </div>
-                <div className={!social ? `flex justify-end border-[0.5px] border-gray-200 p-3 rounded-lg bg-white z-10 self-end` : 'flex items-center justify-end p-3'}>
-                    {social && <div className="h-full px-20 "> <img src="/assets/Icons/Note.svg" alt="lense" /></div>}
-                    {!social &&
+                <div className={social ? `flex justify-end border-[0.5px] border-gray-200 p-3 rounded-lg bg-white z-10 self-end` : 'flex items-center justify-end p-3'}>
+                    {!social && <div className="h-full px-20 "> <img src="/assets/Icons/Note.svg" alt="lense" /></div>}
+                    {social &&
                         <div className="flex flex-col gap-4 w-[50%] pr-12 relative border-r-[0.5px] border-gray-200">
                             {/*Formative Studies */}
                             <div>
@@ -94,10 +94,10 @@ function Services() {
                         </div>
                     }
                     <div className="flex flex-col items-start gap-4 w-[50%] relative pl-12">
-                        {social && <section className="absolute top-[50%] left-[-5px] w-[10px] h-[10px] rounded-full bg-black"></section>}
+                        {!social && <section className="absolute top-[50%] left-[-5px] w-[10px] h-[10px] rounded-full bg-black"></section>}
                         <p className="font-medium text-lg">Social and Development Research</p>
                         <p className="">We help organizations in gaining insights and learning at various stages of project and program implementation to best meet objectives and enhance impact.</p>
-                        <button className="flex justify-start text-sm opacity-70 cursor-pointer" onClick={() => showSocial((prev) => !prev)}>{social ? `Read More` : `Show Less`}</button>
+                        <button className="flex justify-start text-sm opacity-70 cursor-pointer" onClick={() => showSocial((prev) => !prev)}>{!social ? `Read More` : `Show Less`}</button>
                     </div>
                     
                 </div>

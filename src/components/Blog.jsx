@@ -1,7 +1,7 @@
 import { blogs } from "../data/blogs"
 
 
-function BlogSection() {
+function Blog() {
     return (
         <div>
             <div className="w-full text-center mb-16 font-medium text-lg">Our Blogs</div>
@@ -22,4 +22,4 @@ function BlogSection() {
     )
 }
 
-export default BlogSection
+export default Blog
