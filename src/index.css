@@ -17,7 +17,7 @@
 
 @font-face {
   font-family: clash;
-  src: url('./assets/fonts/ClashDisplay-Variable.ttf');
+  src: url('/assets/fonts/ClashDisplay-Variable.ttf');
 }
 
 body {
