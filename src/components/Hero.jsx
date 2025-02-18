@@ -58,10 +58,13 @@ function Hero() {
 
             {/* Text Content */}
             <p className="text-white text-[45px] font-light z-10 text-center">
-                Bridge the Gap
+                Bridging the Gap
             </p>
-            <p className="text-white text-[25px] font-light z-10 text-center">
+            {/* <p className="text-white text-[25px] font-light z-10 text-center">
                 Hemisphere Bridge Group
+            </p> */}
+            <p className="text-white text-base font-light z-10 text-center w-[60%] mt-4">
+                We are committed to providing high-quality and meaningful insights to businesses and organizations, enabling them optimize every decision they undertake.
             </p>
         </div>
     );

@@ -1,7 +1,7 @@
 import React, { JSX } from "react";
 
 type ServiceType = {
-    icon: JSX.Element; // Store JSX instead of a string
+    icon: JSX.Element;
     title: string;
     description: string;
 };
