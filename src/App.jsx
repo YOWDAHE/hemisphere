@@ -14,10 +14,10 @@ function App() {
       <img src="/assets/images/grids.svg" alt="grid" className="w-full h-screen fixed top-0 left-0 z-0 object-cover opacity-15" />
       <div className="relative z-10">
         <Header />
-        <div className="px-12 flex flex-col gap-y-40">
+        <div className="px-12 flex flex-col gap-y-30">
           <Hero />
-          <Services />
           <AboutUs />
+          <Services />
           {/* <Blog /> */}
         </div>
         <div className="flex flex-col gap-y-40 pt-40 px-12">
