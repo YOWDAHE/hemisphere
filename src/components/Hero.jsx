@@ -37,7 +37,7 @@ function Hero() {
 
     return (
         <div
-            className="bg-black h-[calc(100vh-150px)] rounded-lg flex flex-col items-center justify-center relative overflow-hidden cursor-none"
+            className="bg-black h-[calc(100vh-150px)] rounded-3xl flex flex-col items-center justify-center relative overflow-hidden cursor-none mx-12"
             onMouseEnter={()=>setInside(true)}
             onMouseLeave={()=>setInside(false)}
         >
