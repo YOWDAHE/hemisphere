@@ -1,13 +1,7 @@
-import { useState } from "react"
-import { services } from "../data/services"
-import pattern2 from "/assets/images/hemmiPattern2.png"
-import pattern3 from "/assets/images/hemmiPattern3.png"
-import ServiceList from "../../components/serviceList"
+import ServiceList from "./ServiceList"
 
 
 function Services() {
-    const [marketInsight, showMarketInsight] = useState(true)
-    const [social, showSocial] = useState(true)
     return (
         <div className="mt-20 relative">
             <div className="absolute -top-[100px] -right-[400px] w-[1000px] h-[1000px] bg-[radial-gradient(circle_closest-side,#2b56a0_40%,_transparent_100%)] opacity-90 rounded-full blur-3xl"></div>
