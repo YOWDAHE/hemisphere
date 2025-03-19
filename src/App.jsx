@@ -10,9 +10,9 @@ import './index.css'
 function App() {
 
   return (
-    <div className="relative bg-[#f3f5fa] bg-gradient-to-r from-[#f3f5fa] via-[#d0d8ee] to-[#f3f5fa] animate-slowGradient min-h-screen">
+    <div className="relative bg-[#f3f5fa] bg-gradient-to-r from-[#f3f5fa] via-[#e0e3eb] to-[#f3f5fa] animate-slowGradient min-h-screen no-scrollbar overflow-x-hidden">
 
-      <img src="/assets/images/grids.svg" alt="grid" className="w-full h-screen fixed top-0 left-0 z-0 object-cover opacity-10" />
+      <img src="/assets/images/grids.svg" alt="grid" className="w-full h-screen fixed top-0 left-0 z-0 object-cover opacity-15" />
       <div className="relative z-10">
         <Header />
         {/* <div className="px-12 flex flex-col gap-y-30"> */}

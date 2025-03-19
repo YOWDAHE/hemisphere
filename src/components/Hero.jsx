@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import hemiPattern from "/assets/images/hemiPattern.png";
+import hemisperBridge from "/assets/images/hemisperBridge.svg";
 
 function Hero() {
     const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
@@ -19,7 +20,7 @@ function Hero() {
         };
     }, [inside]);
 
-   
+
     useEffect(() => {
         if (spotlightDivRef.current) {
             const size = 10;
@@ -38,13 +39,15 @@ function Hero() {
     return (
         <div
             className="bg-black h-[calc(100vh-150px)] rounded-3xl flex flex-col items-center justify-center relative overflow-hidden cursor-none mx-12"
-            onMouseEnter={()=>setInside(true)}
-            onMouseLeave={()=>setInside(false)}
+            onMouseEnter={() => setInside(true)}
+            onMouseLeave={() => setInside(false)}
         >
             <div
                 className="absolute text-white inset-0 opacity-5 bg-contain"
                 style={{ backgroundImage: `url(${hemiPattern})` }}
-            ></div>
+            >
+                <img src={hemisperBridge} alt="Bridge" className="w-fit object-contain" />
+            </div>
 
             <div
                 ref={spotlightDivRef}
@@ -54,7 +57,9 @@ function Hero() {
                     maskRepeat: "no-repeat",
                     WebkitMaskRepeat: "no-repeat",
                 }}
-            ></div>
+            >
+                <img src={hemisperBridge} alt="Bridge" className="h-fit object-contain" />
+            </div>
 
             {/* Text Content */}
             <p className="text-white text-[45px] font-light z-10 text-center">
