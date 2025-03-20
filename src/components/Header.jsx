@@ -3,8 +3,8 @@ import logo from '/assets/images/Hemisphere Logo Variations-03.png'
 function Header() {
     return (
         <div className='flex items-center justify-between px-20'>
-            <img src={logo} alt="logo" width={100} />
-            <div className='flex gap-8 text-sm'>
+            <img src={logo} alt="logo" width={110} />
+            <div className='flex gap-8'>
                 <a href="#">Services</a>
                 <a href="#">About</a>
                 <a href="#">Blogs</a>
