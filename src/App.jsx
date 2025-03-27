@@ -1,4 +1,5 @@
 import AboutUs from "./components/AboutUs"
+import AboutUsImages from "./components/AboutUsImages"
 import Blog from "./components/Blog"
 import Clients from "./components/Clients"
 import ContactUs from "./components/ContactUs"

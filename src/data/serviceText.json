@@ -1,0 +1,78 @@
+{
+    "b2c": {
+        "title": "BUSINESS TO\nCONSUMER (B2C)\nSERVICE",
+        "description": "We help businesses gain a deeper and better understanding of their customers and provide data on market trends, to enable them make informed business decisions and maximize product/service quality and revenue.",
+        "services": [
+            {
+                "title": "Concept Testing",
+                "description": "We gather customer feedback to assess market feasibility, evaluate product features, and identify potential improvements, helping businesses minimize risks and optimize their offerings for a successful launch."
+            },
+            {
+                "title": "Brand Health Study",
+                "description": "We conduct Brand Health Studies to assess key metrics such as awareness, perception, loyalty, and preference, providing data-driven insights to strengthen brand positioning, customer engagement, and competitive advantage."
+            },
+            {
+                "title": "Product Testing",
+                "description": "We conduct a comprehensive assessment of a product's quality, safety, reliability, and performance to ensure it meets industry standards and consumer expectations. Through rigorous testing protocols, we identify potential defects, validate functionality, and provide actionable insights for improvements, helping businesses deliver high-quality products that build trust and drive market success."
+            },
+            {
+                "title": "Retail Audit",
+                "description": "We provide a comprehensive evaluation of brand and SKU performance at the point of sale, offering businesses critical insights into sales trends, stock availability, pricing strategies, and in-store execution. By systematically tracking trade performance and key market indicators, we help companies set fact-based commercial targets, optimize retail strategies, and enhance distribution efficiency. This service ensures businesses can identify gaps, improve shelf presence, and make data-driven decisions to strengthen their market position and maximize sales potential."
+            },
+            {
+                "title": "Consumer Insights",
+                "description": "We enable businesses to deeply understand customer needs, behaviors, and perceptions by continuously monitoring and analyzing feedback from various channels, including comments, messages, and reviews. By categorizing data based on keywords, product performance, and sentiment trends, we generate comprehensive reports that highlight recurring complaints, frequently praised aspects, and evolving consumer preferences. These actionable insights help businesses refine their products, enhance customer experiences, and develop targeted strategies to boost brand loyalty, satisfaction, and overall market competitiveness."
+            }
+        ]
+    },
+    
+    "b2b": {
+        "title": "BUSINESS TO\nBUSINESS (B2B)\nSERVICES",
+        "description": "We provide high-quality research and strategic insights to help businesses make informed decisions. Our B2B services are designed to support organizations in navigating complex markets, understanding industry trends, and identifying growth opportunities.",
+        "services": [
+            {
+                "title": "Market Research and Analysis",
+                "description": "We provide in-depth business trend analysis and competitive landscape assessments, delivering actionable insights into market dynamics. Our expertise extends to market analysis equipping businesses with the intelligence needed to anticipate market shifts. Additionally, we conduct comprehensive feasibility studies for market entry and expansion, enabling data-driven decision-making for sustainable and strategic growth."
+            },
+            {
+                "title": "Business Intelligence and Data Analytics",
+                "description": "We offer customized data-driven reports, enabling businesses to make informed decisions based on actionable insights. Our services also include performance benchmarking and KPI tracking to measure efficiency and competitiveness. Additionally, we provide predictive analytics for strategic planning, helping organizations anticipate trends and optimize their operations."
+            },
+            {
+                "title": "Strategic Consulting",
+                "description": "We support businesses with business model development and optimization to enhance efficiency and scalability. Our expertise also includes crafting go-to-market strategies and positioning to ensure competitive market entry. Additionally, we conduct policy and regulatory impact assessments to help organizations navigate legal frameworks and compliance requirements effectively."
+            },
+            {
+                "title": "Value Chain Assessment and Support",
+                "description": "We conduct end-to-end value chain analysis to identify inefficiencies and opportunities for improvement. Our services include optimizing suppliers, distributors, and logistics to enhance overall efficiency. Additionally, we develop sustainable and cost-effective supply chain strategies while providing capacity-building support for local producers and suppliers to improve their competitiveness."
+            },
+            {
+                "title": "Corporate Training and Capacity Building",
+                "description": "We offer training on research methodologies and data-driven decision-making to enhance analytical capabilities. Our executive workshops focus on market intelligence and business strategy, equipping leaders with actionable insights. Additionally, we design custom training programs tailored to support business growth and development."
+            },
+            {
+                "title": "Stakeholder Engagement and Partnership Development",
+                "description": "We facilitate B2B networking and collaboration to help businesses build strategic partnerships. Our expertise also includes developing public-private sector engagement strategies to foster meaningful cooperation. Additionally, we provide insights on investor relations and fundraising to support businesses in securing funding and driving growth."
+            }
+        ]
+    },
+    
+    "research": {
+        "title": "MONITORING, EVALUATION, RESEARCH, AND LEARNING (MERL) SERVICES",
+        "description": "Our MERL Service provides comprehensive support to organizations in tracking performance, assessing impact, and fostering continuous learning for improved decision-making. We design and implement robust Monitoring & Evaluation (M&E) frameworks, ensuring that projects and programs achieve their intended goals efficiently and effectively. Through Research & Learning (R&L), we generate actionable insights by analyzing program data, identifying best practices, and recommending strategic improvements. Our approach integrates qualitative and quantitative methodologies to measure outcomes, enhance accountability, and drive evidence-based policymaking. By leveraging MERL, we help governments, NGOs, and development organizations optimize resources, adapt strategies, and maximize impact for sustainable social and economic development.",
+        "services": [
+            {
+                "title": "Formative Research",
+                "description": "We provide essential insights before or during the implementation of a project or program, helping organizations design, refine, and adapt their strategies for greater impact. By analyzing target audiences, contextual factors, and behavioral drivers through qualitative and quantitative research, we identify opportunities and challenges that could influence success. This data-driven approach enables businesses, NGOs, and development agencies to make informed decisions, optimize interventions, and ensure their initiatives remain relevant, effective, and sustainable."
+            },
+            {
+                "title": "Monitoring",
+                "description": "We provide continuous data collection and analysis to measure progress toward project or program objectives, ensuring timely tracking of key performance indicators (KPIs), outputs, and outcomes. By systematically evaluating activities and processes, we help organizations identify successes, detect potential challenges, and make data-driven adjustments to improve efficiency and effectiveness. This proactive approach enhances accountability, supports evidence-based decision-making, and maximizes the impact of interventions."
+            },
+            {
+                "title": "Evaluations",
+                "description": "We provide a comprehensive assessment of program activities and outcomes through systematic data collection and analysis, focusing on measuring impact and extracting key learnings. Using baseline and endline studies, we evaluate progress, effectiveness, and sustainability, helping organizations understand what works, what doesn't, and why. By identifying strengths, challenges, and areas for improvement, our evaluations support evidence-based decision-making, enhance accountability, and inform strategic adjustments to maximize the long-term impact of programs and initiatives."
+            }
+        ]
+    }
+}

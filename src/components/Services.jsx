@@ -1,17 +1,25 @@
 import ServiceList from "./ServiceList"
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
-
+import serviceData from "../data/serviceText.json"
+import customerInsight from "/assets/images/customerInsignt.jpg"
+import reserchImage from "/assets/images/research.jpg"
+import productTesting from "/assets/images/productTesting.jpg"
+import shakingHand from "/assets/images/shaking-hands.jpg"
 
 function Services() {
     const marketRef = useRef(null)
     const researchRef = useRef(null)
     const servicesRef = useRef(null)
     const researchServicesRef = useRef(null)
+    const b2bRef = useRef(null)
+    const b2bServicesRef = useRef(null)
     const isMarketInView = useInView(marketRef, { once: true, margin: "-100px" })
     const isResearchInView = useInView(researchRef, { once: true, margin: "-100px" })
     const isServicesInView = useInView(servicesRef, { once: true, margin: "-100px" })
     const isResearchServicesInView = useInView(researchServicesRef, { once: true, margin: "-100px" })
+    const isB2bInView = useInView(b2bRef, { once: true, margin: "-100px" })
+    const isB2bServicesInView = useInView(b2bServicesRef, { once: true, margin: "-100px" })
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -72,6 +80,58 @@ function Services() {
                 }}
             ></motion.div>
             <motion.div
+                className="absolute  top-[1000px] -right-[400px] w-[1000px] h-[1000px] bg-[radial-gradient(circle_closest-side,#2b56a0_40%,_transparent_100%)] opacity-90 rounded-full blur-3xl"
+                initial={{
+                    y: 0,
+                    x: 0,
+                    opacity: 1
+                }}
+                animate={{
+                    y: [0, -100, 0],
+                    x: [0, 0, -300, 0],
+                    opacity: [0.9, 1, 0.5, 0.9]
+                }}
+                transition={{
+                    duration: 8,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                }}
+            ></motion.div>
+            <motion.div
+                className="absolute top-[1600px] -left-[400px] w-[1000px] h-[1000px] bg-[radial-gradient(circle_closest-side,#006d77_80%,_transparent_100%)] opacity-100 rounded-full blur-3xl"
+                initial={{
+                    x: 0,
+                    size: 0,
+                }}
+                animate={{
+                    x: [0, 200, 700, 300, 0],
+                    size: [0, 10, 3, 0],
+                }}
+                transition={{
+                    duration: 10,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                }}
+            ></motion.div>
+            <motion.div
+                className="absolute  bottom-[600px] -left-[400px] w-[1000px] h-[1000px] bg-[radial-gradient(circle_closest-side,#2b56a0_40%,_transparent_100%)] opacity-90 rounded-full blur-3xl"
+                initial={{
+                    y: 0,
+                    x: 0,
+                    opacity: 1
+                }}
+                animate={{
+                    y: [0, -100, 0],
+                    x: [0, 0, -300, 0],
+                    opacity: [0.9, 1, 0.5, 0.9]
+                }}
+                transition={{
+                    duration: 8,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                }}
+            ></motion.div>
+            <motion.div
                 className="absolute -bottom-[100px] -right-[400px] w-[1000px] h-[1000px] bg-[radial-gradient(circle_closest-side,#37383d_40%,_transparent_100%)] opacity-80 rounded-full blur-3xl"
                 initial={{
                     y: 0,
@@ -96,24 +156,36 @@ function Services() {
                 <div className="flex flex-col items-center gap-10 pt-40 relative">
                     <motion.div
                         ref={marketRef}
-                        className="flex gap-4 w-[90%] px-20 py-10 rounded-[40px] relative items-center justify-center bg-gray-200/40 overflow-hidden"
+                        className="flex gap-4 w-[90%] px-6 py-14 rounded-[40px] relative items-center justify-center bg-gray-200/40 overflow-hidden"
                         initial={{ opacity: 0 }}
                         animate={isMarketInView ? { opacity: 1 } : { opacity: 0 }}
                         transition={{ duration: 0.5 }}
                     >
-                        <motion.p
-                            className="font-black text-6xl text-end"
+                        <div 
+                            className="absolute inset-0 bg-cover bg-center"
+                            style={{ backgroundImage: `url(${customerInsight})` }}
+                        ></div>
+                        <div 
+                            className="absolute inset-0 bg-cover bg-center opacity-60 bg-black"
+                        ></div>
+                        <motion.div
+                            className="font-black text-4xl text-end whitespace-pre-line relative z-10 text-white"
                             initial={{ y: 100, opacity: 0 }}
                             animate={isMarketInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                             transition={{ duration: 0.7, delay: 0.2 }}
-                        >MARKET INSIGHTS</motion.p>
+                        >
+                            BUSINESS TO
+                            CONSUMER (B2C)
+                            SERVICE
+                        </motion.div>
                         <motion.p
-                            className="border-black border-l-2 px-4 text-lg"
+                            className="border-white border-l-2 px-4 text-lg relative z-10 text-white"
                             initial={{ y: 100, opacity: 0 }}
                             animate={isMarketInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                             transition={{ duration: 0.7, delay: 0.4 }}
-                        >We help businesses gain a deeper and better understanding of their customers and provide data on market trends, to enable them make informed business decisions and maximize product/service quality and revenue.</motion.p>
+                        >{serviceData.b2c.description}</motion.p>
                     </motion.div>
+
                     <motion.div 
                         ref={servicesRef}
                         className="flex flex-col gap-8 px-20 py-16 rounded-[40px] relative items-center justify-center bg-gray-200/40"
@@ -121,51 +193,123 @@ function Services() {
                         initial="hidden"
                         animate={isServicesInView ? "visible" : "hidden"}
                     >
-                        <motion.div 
-                            className="grid grid-cols-3 gap-16 mb-4"
+                        <motion.div
+                            className="grid grid-cols-2 gap-8 mb-4"
                             variants={containerVariants}
                         >
-                            <motion.div variants={itemVariants}>
-                                <ServiceList title="Concept Testing" description="Gathering valuable customer feedback before launching a product minimizes the risk of failure and boosts the chances of success." />
-                            </motion.div>
-                            <motion.div variants={itemVariants}>
-                                <ServiceList title="Brand Health Study" description="Gather data on essential brand metrics such as awareness, perception, loyalty, and preference." />
-                            </motion.div>
-                            <motion.div variants={itemVariants}>
-                                <ServiceList title="Product Testing" description="Assessment of a product to ensure it meets predetermined standards for quality, safety, reliability, and performance before hitting the market." />
-                            </motion.div>
+                            {serviceData.b2c.services.slice(0, 2).map((service, index) => (
+                                <motion.div key={index} variants={itemVariants}>
+                                    <ServiceList title={service.title} description={service.description} />
+                                </motion.div>
+                            ))}
                         </motion.div>
-                        <motion.div 
-                            className="grid grid-cols-2 gap-16 justify-center"
+                        <motion.div
+                            className="grid grid-cols-2 gap-8 justify-center"
                             variants={containerVariants}
                         >
-                            <motion.div variants={itemVariants}>
-                                <ServiceList title="Retail Audit" description="Evaluation of actual performance of brands and SKUs at the point of sale, setting fact-based targets for commercial plans, and monitoring progress. It also tracks trade performance and key market indicators on a regular basis." />
-                            </motion.div>
-                            <motion.div variants={itemVariants}>
-                                <ServiceList title="Consumer Insights" description="Insights that enhance the understanding of customer needs by monitoring comments, messages, reviews, and other feedback. This data can be compiled into reports that highlight recurring complaints and frequently praised aspects, categorized by keywords, products, and other criteria." />
-                            </motion.div>
+                            {serviceData.b2c.services.slice(2, 4).map((service, index) => (
+                                <motion.div key={index} variants={itemVariants}>
+                                    <ServiceList title={service.title} description={service.description} />
+                                </motion.div>
+                            ))}
+                        </motion.div>
+                        <motion.div
+                            className="grid grid-cols-1 gap-8 justify-center -mt-10"
+                            variants={containerVariants}
+                        >
+                            {serviceData.b2c.services.slice(4).map((service, index) => (
+                                <motion.div key={index} variants={itemVariants}>
+                                    <ServiceList title={service.title} description={service.description} />
+                                </motion.div>
+                            ))}
+                        </motion.div>
+                    </motion.div>
+
+                    <motion.div
+                        ref={b2bRef}
+                        className="flex gap-4 w-[90%] px-6 py-14 rounded-[40px] relative items-center justify-center bg-gray-200/40 mt-20 overflow-hidden">
+                        <div
+                            className="absolute inset-0 bg-cover bg-center"
+                            style={{ backgroundImage: `url(${shakingHand})` }}
+                        ></div>
+
+                        <div
+                            className="absolute inset-0 bg-cover bg-center opacity-60 bg-black"
+                        ></div>
+                        <motion.div
+                            className="font-black text-4xl text-end whitespace-pre-line z-10 text-white"
+                            initial={{ y: 100, opacity: 0 }}
+                            animate={isMarketInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                            transition={{ duration: 0.7, delay: 0.2 }}
+                        >
+                            BUSINESS TO
+                            BUSINESS (B2B)
+                            SERVICE
+                        </motion.div>
+                        <motion.p
+                            initial={{ y: 100, opacity: 0 }}
+                            animate={isB2bInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                            transition={{ duration: 0.7, delay: 0.4 }}
+                            className="border-white border-l-2 px-4 text-lg z-10 text-white">
+                            {serviceData.b2b.description}
+                        </motion.p>
+                    </motion.div>
+
+                    <motion.div
+                        ref={b2bServicesRef}
+                        className="flex flex-col gap-8 px-20 py-16 rounded-[40px] relative items-center justify-center bg-gray-200/40"
+                        variants={containerVariants}
+                        initial="hidden"
+                        animate={isB2bServicesInView ? "visible" : "hidden"}
+                    >
+                        <motion.div
+                            className="grid grid-cols-3 gap-16 mb-4 z-10"
+                            variants={containerVariants}
+                        >
+                            {serviceData.b2b.services.slice(0, 3).map((service, index) => (
+                                <motion.div key={index} variants={itemVariants}>
+                                    <ServiceList title={service.title} description={service.description} />
+                                </motion.div>
+                            ))}
+                        </motion.div>
+                        <motion.div
+                            className="grid grid-cols-3 gap-16 z-10"
+                            variants={containerVariants}
+                        >
+                            {serviceData.b2b.services.slice(3).map((service, index) => (
+                                <motion.div key={index} variants={itemVariants}>
+                                    <ServiceList title={service.title} description={service.description} />
+                                </motion.div>
+                            ))}
                         </motion.div>
                     </motion.div>
 
                     <motion.div
                         ref={researchRef}
-                        className="flex gap-4 w-[90%] px-20 py-4 rounded-[40px] relative items-center justify-center bg-gray-200/40 mt-20 overflow-hidden">
+                        className="flex flex-col gap-4 w-[90%] px-20 py-10 rounded-[40px] relative items-center justify-center bg-gray-200/40 mt-20 overflow-hidden">
+                        <div
+                            className="absolute inset-0 bg-cover bg-center"
+                            style={{ backgroundImage: `url(${reserchImage})`, backgroundSize: "cover" }}
+                        ></div>
+                        <div
+                            className="absolute inset-0 bg-cover bg-center opacity-70 bg-black"
+                        ></div>
                         <motion.p
                             initial={{ y: 100, opacity: 0 }}
                             animate={isResearchInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                             transition={{ duration: 0.7, delay: 0.2 }}
-                            className="font-black text-6xl text-end">
-                            SOCIAL AND DEVELOPMENT RESEARCH
+                            className="font-black text-4xl text-center z-10 text-white">
+                            {serviceData.research.title}
                         </motion.p>
                         <motion.p
                             initial={{ y: 100, opacity: 0 }}
                             animate={isResearchInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                             transition={{ duration: 0.7, delay: 0.4 }}
-                            className="border-black border-l-2 px-4 text-lg">
-                            We help organizations in gaining insights and learning at various stages of project and program implementation to best meet objectives and enhance impact.
+                            className="border-white border-t-2 px-4 text-lg text-center mt-2 pt-8 z-10 text-white">
+                            {serviceData.research.description}
                         </motion.p>
                     </motion.div>
+
                     <motion.div 
                         ref={researchServicesRef}
                         className="flex flex-col gap-8 px-20 py-16 rounded-[40px] relative items-center justify-center bg-gray-200/40"
@@ -174,20 +318,17 @@ function Services() {
                         animate={isResearchServicesInView ? "visible" : "hidden"}
                     >
                         <motion.div 
-                            className="grid grid-cols-3 gap-16 mb-4"
+                            className="grid grid-cols-3 gap-8 mb-4"
                             variants={containerVariants}
                         >
-                            <motion.div variants={itemVariants}>
-                                <ServiceList title="Formative Studies" description="An insight that occurs prior to designing or implementing a project or program, or during its implementation, to help shape or adjust the project or program." />
-                            </motion.div>
-                            <motion.div variants={itemVariants}>
-                                <ServiceList title="Monitoring" description="A collection of regular data that measures progress toward achieving the objectives of a project or program." />
-                            </motion.div>
-                            <motion.div variants={itemVariants}>
-                                <ServiceList title="Evaluations" description="Systematic collection and analysis of data on program activities and outcomes, specifically measuring impact and learning through baseline and end line studies." />
-                            </motion.div>
+                            {serviceData.research.services.map((service, index) => (
+                                <motion.div key={index} variants={itemVariants}>
+                                    <ServiceList title={service.title} description={service.description} />
+                                </motion.div>
+                            ))}
                         </motion.div>
                     </motion.div>
+
 
                 </div>
             </div>

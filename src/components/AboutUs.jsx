@@ -1,9 +1,10 @@
+import AboutUsImages from "./AboutUsImages";
 import hemiPattern from "/assets/images/hemiPattern.png";
 
 function AboutUs() {
     return (
         <div
-            className="rounded-lg flex flex-col items-center justify-center relative overflow-hidden px-32"
+            className="rounded-lg flex flex-col items-center justify-center relative overflow-hidden "
         >
             {/* <div
                 className="absolute  inset-0 opacity-5 bg-contain"
@@ -11,10 +12,11 @@ function AboutUs() {
             ></div> */}
 
             {/* Text Content */}
-            <p className=" text-2xl mb-10 z-10 text-center">
+            <p className="text-2xl z-10 text-center mb-10 px-32">
                 About Us
             </p>
-            <p className=" font-light z-10 text-center text-xl">
+            <AboutUsImages />
+            <p className=" font-light z-10 text-center text-xl px-32 mt-10">
                 Hemisphere Bridge Group is a research firm established in November 2014 in Addis Ababa, Ethiopia. The firm comprises a dedicated team of experts committed to providing high-quality and meaningful insights to businesses and organizations, enabling them maximize the impact of each decision they make. Our mission is to serve as a key facilitator in linking individuals, information, and resources, acting as a bridge to deliver valuable insights that promote ethical resource utilization and distribution, thereby enhancing societal value. Upholding core values of integrity and quality, the firm endeavors to offer exceptional services with the goal of fostering a better world.
                 <br />
                 <br />

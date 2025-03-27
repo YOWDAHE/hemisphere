@@ -1,0 +1,11 @@
+/* Custom carousel spacing */
+.slick-slide > div {
+    margin: 0 4px; /* Adjust this value for spacing */
+}
+
+/* Larger images */
+.carousel-item img {
+    width: 600px;  /* Adjust image size */
+    /* height: 300px; Maintain aspect ratio */
+    /* margin: 0 100px; Horizontal spacing */
+}
