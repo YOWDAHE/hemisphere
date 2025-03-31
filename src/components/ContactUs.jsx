@@ -1,29 +1,96 @@
+/* eslint-disable no-undef */
 import TextArea from "antd/es/input/TextArea";
 import { Button, Input } from "antd";
-import { HomeOutlined, MailOutlined, PhoneOutlined, WhatsAppOutlined } from "@ant-design/icons";
+import { HomeOutlined, MailOutlined, PhoneOutlined } from "@ant-design/icons";
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 function ContactUs() {
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState("");
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [remark, setRemark] = useState("");
+    const [button, setButton] = useState("Send");
+    const form = useRef();
+
+    const sendEmail = async (e) => {
+        e.preventDefault();
+        setLoading(true);
+
+        const formData = new FormData(form.current);
+        const requiredFields = ['username', 'email', 'remark'];
+
+        if (requiredFields.some(field => !formData.get(field))) {
+            setError("All fields are required.");
+            setLoading(false);
+            return;
+        }
+
+        try {
+
+            // Send admin notification
+            await emailjs.sendForm(
+                import.meta.env.VITE_APP_SERVICE_ID,
+                import.meta.env.VITE_APP_TEMPLATE_ID,
+                form.current,
+                "f5CIAOozH3wFDf_cJ",
+                {
+                    publicKey: import.meta.env.VITE_APP_PUBLIC_KEY,
+                }
+            );
+
+            // form.current.reset();
+            setName("");
+            setEmail("");
+            setRemark("");
+            setButton("Sent ✔️");
+            setTimeout(() => setButton("Send"), 3000);
+            setError("");
+        } catch (error) {
+            console.error("Email sending failed:", error);
+            setError("Message failed to send. Please try again.");
+        } finally {
+            setLoading(false);
+        }
+    };
+
     return (
-        <div className="flex justify-center gap-4" id="contact-us">
+        <div className="md:flex justify-center gap-4" id="contact-us">
             <section className="flex flex-col bg-white/50 p-12 rounded-2xl flex-1">
                 <div className="w-full mb-2 font-medium text-xl">Contact Us</div>
-                <p className="">Get in touch with us for premium business service, we will promptly respond to all you enquiries.</p>
-                <form action="" className="mt-10 w-full flex flex-col gap-4">
+                <p>Get in touch with us for premium business service. We will promptly respond to all your enquiries.</p>
+
+                <form ref={form} className="mt-10 w-full flex flex-col gap-4">
                     <div className="w-full">
-                        <p className="text-sm opacity-40">Name</p>
-                        <Input placeholder="Enter name" className="w-full" />
+                        <p className="text-sm opacity-40">Your name</p>
+                        <Input name="username" placeholder="Enter your full name" className="w-full" value={name} onChange={(e)=>setName(e.target.value)}/>
                     </div>
+
                     <div className="w-full">
                         <p className="text-sm opacity-40">Email</p>
-                        <Input placeholder="example@gmail.com" className="w-full" />
+                        <Input name="email" placeholder="example@gmail.com" className="w-full" value={email} onChange={(e) => setEmail(e.target.value)} />
                     </div>
+
                     <div className="w-full">
                         <p className="text-sm opacity-40">Remark</p>
-                        <TextArea placeholder="Type here ..." className="w-full" autoSize={{ minRows: 6, maxRows: 8 }} />
+                        <TextArea
+                            name="remark"
+                            placeholder="Type your message here..."
+                            className="w-full"
+                            value={remark} onChange={(e) => setRemark(e.target.value)}
+                            autoSize={{ minRows: 6, maxRows: 8 }}
+                        />
                     </div>
-                    <Button type="primary">Send</Button>
+
+                    {error && <div className="text-red-500 text-sm">{error}</div>}
+
+                    <Button type="primary" onClick={sendEmail} loading={loading} className="mt-4 bg-blue-400 border-2 border-blue-400">
+                        {button}
+                    </Button>
                 </form>
             </section>
+
             <section className="bg-white p-12 rounded-2xl flex-1">
                 <div className="max-w-6xl mx-auto">
                     <div className="grid grid-cols-2 gap-6">
@@ -89,4 +156,4 @@ function ContactUs() {
     )
 }
 
-export default ContactUs
+export default ContactUs;
