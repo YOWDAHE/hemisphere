@@ -25,6 +25,8 @@ body {
   min-height: 100vh;
   font-family: clash;
   overflow: scroll;
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
 
 @keyframes slowGradient {

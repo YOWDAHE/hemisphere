@@ -5,6 +5,7 @@ function AboutUs() {
     return (
         <div
             className="rounded-lg flex flex-col items-center justify-center relative overflow-hidden "
+            id="about-us"
         >
             {/* <div
                 className="absolute  inset-0 opacity-5 bg-contain"

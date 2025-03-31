@@ -1,8 +1,6 @@
 import AboutUs from "./components/AboutUs"
-import AboutUsImages from "./components/AboutUsImages"
-import Blog from "./components/Blog"
-import Clients from "./components/Clients"
 import ContactUs from "./components/ContactUs"
+import Footer from "./components/Footer"
 import Header from "./components/Header"
 import Hero from "./components/Hero"
 import Services from "./components/Services"
@@ -27,6 +25,7 @@ function App() {
           {/* <Clients /> */}
           <ContactUs />
         </div>
+        <Footer />
       </div>
     </div>
   )
