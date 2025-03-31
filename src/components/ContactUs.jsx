@@ -34,7 +34,6 @@ function ContactUs() {
                 import.meta.env.VITE_APP_SERVICE_ID,
                 import.meta.env.VITE_APP_TEMPLATE_ID,
                 form.current,
-                "f5CIAOozH3wFDf_cJ",
                 {
                     publicKey: import.meta.env.VITE_APP_PUBLIC_KEY,
                 }
