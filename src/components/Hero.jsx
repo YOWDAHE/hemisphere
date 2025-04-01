@@ -38,15 +38,15 @@ function Hero() {
 
     return (
         <div
-            className="bg-black h-[calc(100vh-150px)] rounded-3xl flex flex-col items-center justify-center relative overflow-hidden cursor-none mx-12"
+            className="bg-black lg:h-[calc(100vh-150px)] h-[90vh] rounded-xl lg:rounded-3xl flex flex-col items-center justify-center relative overflow-hidden cursor-none lg:mx-12 mx-3 mt-4 md:mt-0"
             onMouseEnter={() => setInside(true)}
             onMouseLeave={() => setInside(false)}
         >
             <div
-                className="absolute text-white inset-0 opacity-5 bg-contain"
+                className="absolute text-white inset-0 lg:opacity-5 opacity-15 bg-contain"
                 style={{ backgroundImage: `url(${hemiPattern})` }}
             >
-                <img src={hemisperBridge} alt="Bridge" className="w-fit object-contain" />
+                <img src={hemisperBridge} alt="Bridge" className="w-fit object-contain hidden lg:inline-block" />
             </div>
 
             <div
@@ -58,17 +58,17 @@ function Hero() {
                     WebkitMaskRepeat: "no-repeat",
                 }}
             >
-                <img src={hemisperBridge} alt="Bridge" className="h-fit object-contain" />
+                <img src={hemisperBridge} alt="Bridge" className="h-fit object-contain hidden lg:inline-block" />
             </div>
 
             {/* Text Content */}
-            <p className="text-white text-[45px] font-light z-10 text-center">
+            {/* <p className="text-white/80 md:hidden text-center mb-4">
+                HEMISPHERE BRIDGE GROUP
+            </p> */}
+            <p className="text-white lg:text-[45px] text-4xl lg:font-light z-10 text-center">
                 Bridging the Gap
             </p>
-            {/* <p className="text-white text-[25px] font-light z-10 text-center">
-                Hemisphere Bridge Group
-            </p> */}
-            <p className="text-white font-light z-10 text-center w-[60%] mt-4 text-xl">
+            <p className="text-white font-light z-10 text-center lg:w-[60%] w-[80%] mt-4 lg:text-xl">
                 We are committed to providing high-quality and meaningful insights to businesses and organizations, enabling them optimize every decision they undertake.
             </p>
         </div>

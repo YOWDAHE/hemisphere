@@ -150,12 +150,12 @@ function Services() {
             ></motion.div>
 
             <div className="text-xl font-medium text-center">Services We Provide</div>
-            <div className="relative px-12">
+            <div className="relative lg:px-12 px-4">
                 <div className="absolute inset-0 bg-[url('/assets/images/hemmiPattern3.png')] bg-contain bg-center opacity-10 [mask-image:linear-gradient(to_bottom,transparent,black_20%,black_80%,transparent)]"></div>
-                <div className="flex flex-col items-center gap-10 pt-40 relative">
+                <div className="flex flex-col items-center gap-10 lg:pt-40 pt-20 relative">
                     <motion.div
                         ref={marketRef}
-                        className="flex gap-4 w-[90%] px-6 py-14 rounded-[40px] relative items-center justify-center bg-gray-200/40 overflow-hidden"
+                        className="flex flex-col md:flex-row gap-4 lg:w-[90%] lg:mx-0 px-6 py-14 lg:rounded-[40px] rounded-lg relative items-center justify-center bg-gray-200/40 overflow-hidden"
                         initial={{ opacity: 0 }}
                         animate={isMarketInView ? { opacity: 1 } : { opacity: 0 }}
                         transition={{ duration: 0.5 }}
@@ -168,7 +168,7 @@ function Services() {
                             className="absolute inset-0 bg-cover bg-center opacity-60 bg-black"
                         ></div>
                         <motion.div
-                            className="font-black text-4xl text-end whitespace-pre-line relative z-10 text-white"
+                            className="font-black text-4xl lg:text-end whitespace-pre-line relative z-10 text-white"
                             initial={{ y: 100, opacity: 0 }}
                             animate={isMarketInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                             transition={{ duration: 0.7, delay: 0.2 }}
@@ -187,13 +187,13 @@ function Services() {
 
                     <motion.div 
                         ref={servicesRef}
-                        className="flex flex-col gap-8 px-20 py-16 rounded-[40px] relative items-center justify-center bg-gray-200/40"
+                        className="flex flex-col gap-8 md:px-20 px-6 md:py-16 py-6 lg:rounded-[40px] rounded-lg relative items-center justify-center bg-gray-200/40"
                         variants={containerVariants}
                         initial="hidden"
                         animate={isServicesInView ? "visible" : "hidden"}
                     >
                         <motion.div
-                            className="grid grid-cols-2 gap-8 mb-4"
+                            className="grid md:grid-cols-2 grid-cols-1 gap-8 mb-4"
                             variants={containerVariants}
                         >
                             {serviceData.b2c.services.slice(0, 2).map((service, index) => (
@@ -203,7 +203,7 @@ function Services() {
                             ))}
                         </motion.div>
                         <motion.div
-                            className="grid grid-cols-2 gap-8 justify-center"
+                            className="grid md:grid-cols-2 grid-cols-1 gap-8 justify-center"
                             variants={containerVariants}
                         >
                             {serviceData.b2c.services.slice(2, 4).map((service, index) => (
@@ -213,7 +213,7 @@ function Services() {
                             ))}
                         </motion.div>
                         <motion.div
-                            className="grid grid-cols-1 gap-8 justify-center -mt-10"
+                            className="grid grid-cols-1 gap-8 justify-center lg:mt-[-40px]"
                             variants={containerVariants}
                         >
                             {serviceData.b2c.services.slice(4).map((service, index) => (
@@ -226,7 +226,7 @@ function Services() {
 
                     <motion.div
                         ref={b2bRef}
-                        className="flex gap-4 w-[90%] px-6 py-14 rounded-[40px] relative items-center justify-center bg-gray-200/40 mt-20 overflow-hidden">
+                        className="flex flex-col md:flex-row gap-4 lg:w-[90%] px-6 py-14 lg:rounded-[40px] rounded-lg relative items-center justify-center bg-gray-200/40 mt-20 overflow-hidden">
                         <div
                             className="absolute inset-0 bg-cover bg-center"
                             style={{ backgroundImage: `url(${shakingHand})` }}
@@ -236,7 +236,7 @@ function Services() {
                             className="absolute inset-0 bg-cover bg-center opacity-60 bg-black"
                         ></div>
                         <motion.div
-                            className="font-black text-4xl text-end whitespace-pre-line z-10 text-white"
+                            className="font-black text-4xl lg:text-end whitespace-pre-line z-10 text-white"
                             initial={{ y: 100, opacity: 0 }}
                             animate={isMarketInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                             transition={{ duration: 0.7, delay: 0.2 }}
@@ -256,13 +256,13 @@ function Services() {
 
                     <motion.div
                         ref={b2bServicesRef}
-                        className="flex flex-col gap-8 px-20 py-16 rounded-[40px] relative items-center justify-center bg-gray-200/40"
+                        className="flex flex-col gap-8 md:px-20 px-6 md:py-16 py-6 lg:rounded-[40px] rounded-lg relative items-center justify-center bg-gray-200/40"
                         variants={containerVariants}
                         initial="hidden"
                         animate={isB2bServicesInView ? "visible" : "hidden"}
                     >
                         <motion.div
-                            className="grid grid-cols-3 gap-16 mb-4 z-10"
+                            className="grid md:grid-cols-3 grid-cols-1 gap-16 mb-4 z-10"
                             variants={containerVariants}
                         >
                             {serviceData.b2b.services.slice(0, 3).map((service, index) => (
@@ -272,7 +272,7 @@ function Services() {
                             ))}
                         </motion.div>
                         <motion.div
-                            className="grid grid-cols-3 gap-16 z-10"
+                            className="grid md:grid-cols-3 grid-col-1 gap-16 z-10"
                             variants={containerVariants}
                         >
                             {serviceData.b2b.services.slice(3).map((service, index) => (
@@ -285,7 +285,7 @@ function Services() {
 
                     <motion.div
                         ref={researchRef}
-                        className="flex flex-col gap-4 w-[90%] px-20 py-10 rounded-[40px] relative items-center justify-center bg-gray-200/40 mt-20 overflow-hidden">
+                        className="flex flex-col  gap-4 lg:w-[90%] lg:px-20 px-6 py-10 lg:rounded-[40px] rounded-lg relative items-center justify-center bg-gray-200/40 mt-20 overflow-hidden">
                         <div
                             className="absolute inset-0 bg-cover bg-center"
                             style={{ backgroundImage: `url(${reserchImage})`, backgroundSize: "cover" }}
@@ -297,27 +297,27 @@ function Services() {
                             initial={{ y: 100, opacity: 0 }}
                             animate={isResearchInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                             transition={{ duration: 0.7, delay: 0.2 }}
-                            className="font-black text-4xl text-center z-10 text-white">
+                            className="font-black text-4xl md:text-center z-10 text-white">
                             {serviceData.research.title}
                         </motion.p>
                         <motion.p
                             initial={{ y: 100, opacity: 0 }}
                             animate={isResearchInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
                             transition={{ duration: 0.7, delay: 0.4 }}
-                            className="border-white border-t-2 px-4 text-lg text-center mt-2 pt-8 z-10 text-white">
+                            className="border-white border-l-2 md:border-l-0 md:border-t-2 md:px-4 px-2 text-lg md:text-center mt-2 md:pt-8 z-10 text-white">
                             {serviceData.research.description}
                         </motion.p>
                     </motion.div>
 
                     <motion.div 
                         ref={researchServicesRef}
-                        className="flex flex-col gap-8 px-20 py-16 rounded-[40px] relative items-center justify-center bg-gray-200/40"
+                        className="flex flex-col gap-8 md:px-20 px-6 md:py-16 py-6 lg:rounded-[40px] rounded-lg relative items-center justify-center bg-gray-200/40"
                         variants={containerVariants}
                         initial="hidden"
                         animate={isResearchServicesInView ? "visible" : "hidden"}
                     >
                         <motion.div 
-                            className="grid grid-cols-3 gap-8 mb-4"
+                            className="grid lg:grid-cols-3 grid-cols-1 gap-8 mb-4"
                             variants={containerVariants}
                         >
                             {serviceData.research.services.map((service, index) => (

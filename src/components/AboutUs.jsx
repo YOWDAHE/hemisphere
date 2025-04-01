@@ -17,7 +17,7 @@ function AboutUs() {
                 About Us
             </p>
             <AboutUsImages />
-            <p className=" font-light z-10 text-center text-xl px-32 mt-10">
+            <p className=" font-normal z-10 text-center text-xl md:px-32 px-6 mt-10 text-pretty">
                 Hemisphere Bridge Group is a research firm established in November 2014 in Addis Ababa, Ethiopia. The firm comprises a dedicated team of experts committed to providing high-quality and meaningful insights to businesses and organizations, enabling them maximize the impact of each decision they make. Our mission is to serve as a key facilitator in linking individuals, information, and resources, acting as a bridge to deliver valuable insights that promote ethical resource utilization and distribution, thereby enhancing societal value. Upholding core values of integrity and quality, the firm endeavors to offer exceptional services with the goal of fostering a better world.
                 <br />
                 <br />

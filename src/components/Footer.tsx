@@ -1,7 +1,7 @@
 import React from "react";
 const Footer = () => {
 	return (
-		<footer className="bg-gray-800 text-white p-12 px-30 mt-20 leading-tight tracking-[1px] flex flex-col items-center justify-center relative">
+		<footer className="bg-gray-800 text-white p-12 md:px-30 px-8 mt-20 leading-tight tracking-[1px] flex flex-col md:items-center md:justify-center relative">
 			<div className="absolute inset-0 bg-[url('/assets/images/hemmiPattern3.png')] bg-center opacity-50 [mask-image:linear-gradient(to_bottom,transparent,black_20%,black_80%,transparent)] bg-cover"></div>
 			<div className="absolute inset-0 bg-black/80"></div>
 			<div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 z-10">
@@ -44,13 +44,13 @@ const Footer = () => {
 							href="mailto:tadesse.tilaye@hemispherebridgegroup.com"
 							className="block hover:text-gray-300 transition-colors"
 						>
-							tadesse.tilaye@hemispherebridgegroup.com
+							tadesse.tilaye<br className="md:hidden"/>@hemispherebridgegroup.com
 						</a>
 						<a
 							href="mailto:bethelhem.demisse@hemispherebridgegroup.com"
 							className="block hover:text-gray-300 transition-colors"
 						>
-							bethelhem.demisse@hemispherebridgegroup.com
+							bethelhem.demisse<br className="md:hidden"/>@hemispherebridgegroup.com
 						</a>
 					</div>
 				</div>

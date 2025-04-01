@@ -31,11 +31,11 @@ function ContactUs() {
 
             // Send admin notification
             await emailjs.sendForm(
-                import.meta.env.VITE_APP_SERVICE_ID,
-                import.meta.env.VITE_APP_TEMPLATE_ID,
+                import.meta.env.VITE_SERVICE_ID,
+                import.meta.env.VITE_TEMPLATE_ID,
                 form.current,
                 {
-                    publicKey: import.meta.env.VITE_APP_PUBLIC_KEY,
+                    publicKey: import.meta.env.VITE_PUBLIC_KEY,
                 }
             );
 
@@ -56,7 +56,7 @@ function ContactUs() {
 
     return (
         <div className="md:flex justify-center gap-4" id="contact-us">
-            <section className="flex flex-col bg-white/50 p-12 rounded-2xl flex-1">
+            <section className="flex flex-col bg-white/50 md:p-12 p-6 md:rounded-2xl flex-1">
                 <div className="w-full mb-2 font-medium text-xl">Contact Us</div>
                 <p>Get in touch with us for premium business service. We will promptly respond to all your enquiries.</p>
 
@@ -90,7 +90,7 @@ function ContactUs() {
                 </form>
             </section>
 
-            <section className="bg-white p-12 rounded-2xl flex-1">
+            <section className="bg-white md:p-12 p-6 md:rounded-2xl flex-1">
                 <div className="max-w-6xl mx-auto">
                     <div className="grid grid-cols-2 gap-6">
                         <div className="flex flex-col items-start">
@@ -109,7 +109,7 @@ function ContactUs() {
                             </div>
                             <span className="text-lg">+251911058957</span>
                         </div>
-                        <div className="flex flex-col items-start">
+                        <div className="flex flex-col items-start col-span-2 md:col-span-1">
                             <div className="flex gap-2 items-center justify-center opacity-50
                             ">
                                 <MailOutlined />

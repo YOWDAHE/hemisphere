@@ -19,10 +19,8 @@ function App() {
           <Hero />
           <AboutUs />
           <Services />
-          {/* <Blog /> */}
         </div>
-        <div className="flex flex-col gap-y-40 pt-40 px-12">
-          {/* <Clients /> */}
+        <div className="flex flex-col gap-y-40 pt-40 md:px-12">
           <ContactUs />
         </div>
         <Footer />
