@@ -30,12 +30,22 @@ function ContactUs() {
         try {
 
             // Send admin notification
+
+            // await emailjs.sendForm(
+            //     import.meta.env.VITE_SERVICE_ID,
+            //     import.meta.env.VITE_TEMPLATE_ID,
+            //     form.current,
+            //     {
+            //         publicKey: import.meta.env.VITE_PUBLIC_KEY,
+            //     }
+            // );
+
             await emailjs.sendForm(
-                import.meta.env.VITE_SERVICE_ID,
-                import.meta.env.VITE_TEMPLATE_ID,
+                "service_6o76805",
+                "template_zawzkx5",
                 form.current,
                 {
-                    publicKey: import.meta.env.VITE_PUBLIC_KEY,
+                    publicKey: "f5CIAOozH3wFDf_cJ",
                 }
             );
 
