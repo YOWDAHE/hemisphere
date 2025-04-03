@@ -1,16 +1,12 @@
 import AboutUsImages from "./AboutUsImages";
-import hemiPattern from "/assets/images/hemiPattern.png";
 
 function AboutUs() {
     return (
         <div
-            className="rounded-lg flex flex-col items-center justify-center relative overflow-hidden "
+            className="rounded-lg flex flex-col items-center justify-center relative overflow-hidden pb-40"
             id="about-us"
         >
-            {/* <div
-                className="absolute  inset-0 opacity-5 bg-contain"
-                style={{ backgroundImage: `url(${hemiPattern})` }}
-            ></div> */}
+            <div className="absolute inset-0 bg-[url('/assets/images/hemmiPattern3.png')] bg-contain bg-center opacity-[0.1] [mask-image:linear-gradient(to_bottom,transparent,black_20%,black_80%,transparent)]"></div>
 
             {/* Text Content */}
             <p className="text-2xl z-10 text-center mb-10 px-32">

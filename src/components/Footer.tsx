@@ -30,7 +30,7 @@ const Footer = () => {
 					<p className="text-gray-300">
 						HQ
 						<br />
-						Addis Ababa, Bole, Shegere
+						Addis Ababa, Bole, Sheger
 						<br />
 						House, 5th floor #508
 					</p>
@@ -51,6 +51,12 @@ const Footer = () => {
 							className="block hover:text-gray-300 transition-colors"
 						>
 							bethelhem.demisse<br className="md:hidden"/>@hemispherebridgegroup.com
+						</a>
+						<a
+							href="mailto:info@hemispherebridgegroup.com"
+							className="block hover:text-gray-300 transition-colors"
+						>
+							info<br className="md:hidden"/>@hemispherebridgegroup.com
 						</a>
 					</div>
 				</div>

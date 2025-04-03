@@ -43,7 +43,7 @@ function Services() {
     }
 
     return (
-        <div className="mt-20 relative" id="services">
+        <div className="-mt-20 relative" id="services">
             <motion.div
                 className="absolute -top-[100px] -right-[400px] w-[1000px] h-[1000px] bg-[radial-gradient(circle_closest-side,#2b56a0_40%,_transparent_100%)] opacity-90 rounded-full blur-3xl"
                 initial={{

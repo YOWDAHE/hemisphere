@@ -37,16 +37,21 @@ function Hero() {
     }, [cursorPosition]);
 
     return (
+        // <div
+        //     className="bg-black/40 lg:h-[calc(100vh-150px)] h-[90vh] rounded-xl lg:rounded-3xl flex flex-col items-center justify-center relative overflow-hidden cursor-none lg:mx-12 mx-3 mt-4 md:mt-0"
+        //     onMouseEnter={() => setInside(true)}
+        //     onMouseLeave={() => setInside(false)}
+        // >
         <div
-            className="bg-black lg:h-[calc(100vh-150px)] h-[90vh] rounded-xl lg:rounded-3xl flex flex-col items-center justify-center relative overflow-hidden cursor-none lg:mx-12 mx-3 mt-4 md:mt-0"
+            className="bg-black/100 lg:h-[calc(100vh-150px)] h-[90vh] rounded-xl lg:rounded-3xl flex flex-col items-center justify-center relative overflow-hidden cursor-none lg:mx-12 mx-3 mt-4 md:mt-0"
             onMouseEnter={() => setInside(true)}
             onMouseLeave={() => setInside(false)}
         >
             <div
-                className="absolute text-white inset-0 lg:opacity-5 opacity-15 bg-contain"
+                className="absolute text-white inset-0 lg:opacity-15 opacity-15 bg-contain"
                 style={{ backgroundImage: `url(${hemiPattern})` }}
             >
-                <img src={hemisperBridge} alt="Bridge" className="w-fit object-contain hidden lg:inline-block" />
+                {/* <img src={hemisperBridge} alt="Bridge" className="w-fit object-contain hidden lg:inline-block" /> */}
             </div>
 
             <div
@@ -58,7 +63,7 @@ function Hero() {
                     WebkitMaskRepeat: "no-repeat",
                 }}
             >
-                <img src={hemisperBridge} alt="Bridge" className="h-fit object-contain hidden lg:inline-block" />
+                {/* <img src={hemisperBridge} alt="Bridge" className="h-fit object-contain hidden lg:inline-block" /> */}
             </div>
 
             {/* Text Content */}

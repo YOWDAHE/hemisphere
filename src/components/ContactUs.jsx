@@ -119,16 +119,19 @@ function ContactUs() {
                             </div>
                             <span className="text-lg">+251911058957</span>
                         </div>
-                        <div className="flex flex-col items-start col-span-2 md:col-span-1">
+                        <div className="flex flex-col items-start col-span-2">
                             <div className="flex gap-2 items-center justify-center opacity-50
                             ">
                                 <MailOutlined />
                                 <span className="text-lg">Email</span>
                             </div>
-                            <span className="text-lg">tadesse.tilaye@
+                            <span className="text-lg mb-4">tadesse.tilaye@
                                 hemispherebridgegroup.com</span>
+                            <span className="text-lg mb-4">bethelhem.demisse@
+                                hemispherebridgegroup.com</span>
+                            <span className="text-lg"> info@hemispherebridgegroup.com</span>
                         </div>
-                        <div className="flex flex-col items-start">
+                        {/* <div className="flex flex-col items-start col-span-2">
                             <div className="flex gap-2 items-center justify-center opacity-50
                             ">
                                 <MailOutlined />
@@ -136,7 +139,16 @@ function ContactUs() {
                             </div>
                             <span className="text-lg">bethelhem.demisse@
                                 hemispherebridgegroup.com</span>
-                        </div>
+                        </div> */}
+                        {/* <div className="flex flex-col items-start col-span-2">
+                            <div className="flex gap-2 items-center justify-center opacity-50
+                            ">
+                                <MailOutlined />
+                                <span className="text-lg">Email</span>
+                            </div>
+                            <span className="text-lg">bethelhem.demisse@
+                                hemispherebridgegroup.com</span>
+                        </div> */}
 
                         <div className="flex flex-col items-start col-span-2">
                             <div className="flex gap-2 items-center justify-center opacity-50
