@@ -156,7 +156,7 @@ function ContactUs() {
                                 <HomeOutlined className="" />
                                 <span className="text-lg">Our Office</span>
                             </div>
-                            <span className="text-lg">Addis Ababa, Bole, Shegere
+                            <span className="text-lg">Addis Ababa, Bole, Sheger
                                 House, 5th floor #508</span>
                         </div>
                     </div>
